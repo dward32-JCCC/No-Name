@@ -1,7 +1,6 @@
-# No-Name
+# No Name
 
-## heading 2
+## Team Members
+* Daniel Ward
 
-### heading 3
 
-* bullet point
