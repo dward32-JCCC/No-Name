@@ -7,6 +7,7 @@
 Make sure to make a branch and make edits to it rather than the main branch
 
 Create and switch to a new branch:
+
 git checkout -b newBranchName
 
 Switch to branch:
