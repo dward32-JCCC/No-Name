@@ -1,6 +1,5 @@
 # No Name
 ## Team Members
-*     Daniel Ward - I made a change
+* Daniel Ward
 * Carson Bastian 
-* Yassine Ben Addi - I made a change
 * Kyle Stander
