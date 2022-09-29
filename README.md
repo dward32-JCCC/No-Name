@@ -21,3 +21,7 @@ Switch to a branch and merge another branch into it:
 git checkout branchName1
 git merge branchName2
 
+
+Delete branch:
+
+git branch --delete branchName
