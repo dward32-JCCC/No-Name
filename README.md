@@ -22,6 +22,11 @@ git checkout branchName1
 git merge branchName2
 
 
+Delete branch:
+
+git branch --delete branchName
+
+
 To see local branches, run this command: 
 
 git branch
