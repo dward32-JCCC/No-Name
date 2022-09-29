@@ -25,3 +25,18 @@ git merge branchName2
 Delete branch:
 
 git branch --delete branchName
+
+
+To see local branches, run this command: 
+
+git branch
+
+
+To see remote branches, run this command:
+
+git branch -r
+
+
+To see all local and remote branches, run this command: 
+
+git branch -a
