@@ -21,3 +21,7 @@ Switch to a branch and merge another branch into it:
 git checkout branchName1
 git merge branchName2
 
+
+To see local branches, run this command: git branch.
+To see remote branches, run this command: git branch -r.
+To see all local and remote branches, run this command: git branch -a
