@@ -1,0 +1,15 @@
+
+@{
+    ViewData["Title"] = "Processes";
+    var myProcess = ViewBag.myProcesses as System.Diagnostics.Process[];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var item in myProcess)
+    {
+        <li>@item.ProcessName</li>
+    }
+</ul>
+
