@@ -1,0 +1,13 @@
+﻿@{ // razor syntax - allows use of C# in the view
+    ViewData["Title"] = "Hello";
+
+    string[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"};
+}
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var month in months) {
+        <li>@month</li>
+    }
+</ul>
+
