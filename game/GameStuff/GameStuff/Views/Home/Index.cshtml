@@ -1,0 +1,17 @@
+﻿@model Game
+
+<div class="text-center">
+    <h1>GAME OF THE DAY!</h1>
+    <ul class="list-group">
+        <li class="list-group-item ">
+            <h4>
+                <a asp-controller="Game" 
+                   asp-action="Details"                   
+                   asp-route-id="@Model.GameId" 
+                   asp-route-slug="@Model.Title.Slug()">
+                    @Model.Title
+                </a>
+            </h4>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,31 @@
+﻿@model Developer
+
+@{
+    ViewData["Title"] = " | Developer";
+}
+
+<h1>Developer</h1>
+
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr class="thead-dark">
+            <th>@Model.FullName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @foreach (var ba in Model.GameDevelopers)
+                {
+                    <p>
+                        <a asp-action="Details" asp-controller="Game"
+                           asp-route-id="@ba.GameId"
+                           asp-route-slug="@ba.Game.Title.Slug()">
+                            @ba.Game.Title
+                        </a>
+                    </p>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
