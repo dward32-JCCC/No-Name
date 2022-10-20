@@ -55,3 +55,13 @@ type git clone https://github.com/dward32-JCCC/No-Name.git
 
 
 make sure to make a branch when editing
+
+when pushing to reperatory,
+
+Git Bash Here in No-Name folder
+
+git add .
+
+git commit -m"some message"
+
+git push
