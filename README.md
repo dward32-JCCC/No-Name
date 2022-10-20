@@ -43,9 +43,15 @@ git branch -a
 
 
 Kyle do this:------------------------------------------------
+
 Download Gitbash
+
 right click on desktop
+
 select Git Bash Here
+
 type git clone https://github.com/dward32-JCCC/No-Name.git
+
+
 
 make sure to make a branch when editing
