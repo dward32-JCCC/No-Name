@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
         "projectName": "GameStuff",
         "projectPath": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
-        "packagesPath": "C:\\Users\\kstander\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\dward32\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -77,14 +77,15 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.24, 3.1.24]"
+              "version": "[3.1.30, 3.1.30]"
             }
           ],
           "frameworkReferences": {
@@ -95,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
