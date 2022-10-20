@@ -40,3 +40,11 @@ git branch -r
 To see all local and remote branches, run this command: 
 
 git branch -a
+
+
+Kyle do this:------------------------------------------------
+Download Gitbash
+right click on desktop
+select Git Bash Here
+type git clone 
+
