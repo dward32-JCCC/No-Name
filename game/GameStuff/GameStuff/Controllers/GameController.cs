@@ -15,7 +15,7 @@ namespace GameStuff.Controllers
             var builder = new GamesGridBuilder(HttpContext.Session, values, 
                 defaultSortField: nameof(Game.Title));
 
-            var options = new BookQueryOptions {
+            var options = new GameQueryOptions {
                 Include = "GameDevelopers.Developer, Genre",
                 OrderByDirection = builder.CurrentRoute.SortDirection,
                 PageNumber = builder.CurrentRoute.PageNumber,
