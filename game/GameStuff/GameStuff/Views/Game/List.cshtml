@@ -46,40 +46,42 @@
         @* for each table column, update the route dictionary with the field to sort by, and then use
             that route dictionary and the current route to create route segments for sorting link *@
         <thead class="thead-dark">
-            <tr>
-                <th>
-                    @{ routes.SetSortAndDirection(nameof(Game.Title), current); }
-                    <a asp-action="List" asp-all-route-data="@routes"
-                       class="text-white">Title</a>
-                </th>
-                <th>
-                    Developer(s)
-                </th>
-                <th>
-                    @{ routes.SetSortAndDirection(nameof(Genre), current); }
-                    <a asp-action="List" asp-all-route-data="@routes"
-                       class="text-white">Genre</a>
-                </th>
-                <th>
-                    @{ routes.SetSortAndDirection(nameof(Game.Price), current); }
-                    <a asp-action="List" asp-all-route-data="@routes"
-                       class="text-white">Price</a>
-                </th>
-                <th></th>
-            </tr>
+        <tr>
+            <th>Image</th>
+            <th>
+                @{ routes.SetSortAndDirection(nameof(Game.Title), current); }
+                <a asp-action="List" asp-all-route-data="@routes"
+                   class="text-white">Title</a>
+            </th>
+            <th>
+                Developer(s)
+            </th>
+            <th>
+                @{ routes.SetSortAndDirection(nameof(Genre), current); }
+                <a asp-action="List" asp-all-route-data="@routes"
+                   class="text-white">Genre</a>
+            </th>
+            <th>
+                @{ routes.SetSortAndDirection(nameof(Game.Price), current); }
+                <a asp-action="List" asp-all-route-data="@routes"
+                   class="text-white">Price</a>
+            </th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (Game book in Model.Games)
+            @foreach (Game game in Model.Games)
             {
                 <tr>
+                    <td><img src="~/images/@game.Image" width="200" height="200" /></td>
                     <td>
-                        <a asp-action="Details" asp-route-id="@book.GameId"
-                           asp-route-slug="@book.Title.Slug()">
-                            @book.Title
+                        <a asp-action="Details" asp-route-id="@game.GameId"
+                           asp-route-slug="@game.Title.Slug()">
+                            @game.Title
                         </a>
                     </td>
                     <td>
-                        @foreach (var ba in book.GameDevelopers)
+                        @foreach (var ba in game.GameDevelopers)
                         {
                             <p>
                                 <a asp-action="Details" asp-controller="Developer"
@@ -90,10 +92,10 @@
                             </p>
                         }
                     </td>
-                    <td>@book.Genre?.Name</td>
-                    <td>@book.Price.ToString("c")</td>
+                    <td>@game.Genre?.Name</td>
+                    <td>@game.Price.ToString("c")</td>
                     <td>
-                        <button type="submit" name="id" value="@book.GameId"
+                        <button type="submit" name="id" value="@game.GameId"
                                 class="btn btn-primary">
                             Add To Cart
                         </button>

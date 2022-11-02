@@ -2,7 +2,7 @@
 
 namespace GameStuff.Models
 {
-    public class BookQueryOptions : QueryOptions<Game>
+    public class GameQueryOptions : QueryOptions<Game>
     {
         public void SortFilter(GamesGridBuilder builder)
         {

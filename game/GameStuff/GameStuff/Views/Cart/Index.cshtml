@@ -29,18 +29,20 @@
 <form asp-action="Remove" method="post">
     <table class="table">
         <thead class="thead-dark">
-            <tr>
-                <th>Title</th>
-                <th>Developer(s)</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-                <th></th>
-            </tr>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Developer(s)</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
             @foreach (CartItem item in Model.List)  {
                 <tr>
+                    <td><img src="~/images/@item.Game.Image" width="200" height="200" /></td>
                     <td>
                         <a asp-action="Details" asp-controller="Game"
                            asp-route-id="@item.Game.GameId"
@@ -49,7 +51,8 @@
                         </a>
                     </td>
                     <td>
-                        @foreach (var keyValuePair in item.Game.Developers) {
+                        @foreach (var keyValuePair in item.Game.Developers)
+                        {
                             <p>
                                 <a asp-action="Details" asp-controller="Developer"
                                    asp-route-id="@keyValuePair.Key"

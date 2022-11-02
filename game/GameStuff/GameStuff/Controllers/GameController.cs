@@ -15,7 +15,7 @@ namespace GameStuff.Controllers
             var builder = new GamesGridBuilder(HttpContext.Session, values, 
                 defaultSortField: nameof(Game.Title));
 
-            var options = new BookQueryOptions {
+            var options = new GameQueryOptions {
                 Include = "GameDevelopers.Developer, Genre",
                 OrderByDirection = builder.CurrentRoute.SortDirection,
                 PageNumber = builder.CurrentRoute.PageNumber,
@@ -38,11 +38,11 @@ namespace GameStuff.Controllers
 
         public ViewResult Details(int id)
         {
-            var book = data.Games.Get(new QueryOptions<Game> {
+            var game = data.Games.Get(new QueryOptions<Game> {
                 Include = "GameDevelopers.Developer, Genre",
                 Where = b => b.GameId == id
             });
-            return View(book);
+            return View(game);
         }
 
         [HttpPost]
