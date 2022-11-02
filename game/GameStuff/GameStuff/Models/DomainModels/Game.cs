@@ -19,6 +19,10 @@ namespace GameStuff.Models
         public string GenreId { get; set; }
 
         public Genre Genre { get; set; }
+
+        public string Description { get; set; }
+
+        public string Image { get; set; }
         public ICollection<GameDeveloper> GameDevelopers { get; set; }
     }
 }

@@ -7,10 +7,12 @@ namespace GameStuff.Models
         public int GameId { get; set; }
         public string Title { get; set; }
         public double Price { get; set; }
-        public Dictionary<int, string> Developers { get; set; }
+        public string Image { get; set; }
+    public Dictionary<int, string> Developers { get; set; }
 
         public void Load(Game game)
         {
+            Image = game.Image;
             GameId = game.GameId;
             Title = game.Title;
             Price = game.Price;

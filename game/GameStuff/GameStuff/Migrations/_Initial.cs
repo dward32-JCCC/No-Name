@@ -40,7 +40,9 @@ namespace GameStuff.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(maxLength: 200, nullable: false),
                     Price = table.Column<double>(nullable: false),
-                    GenreId = table.Column<string>(nullable: false)
+                    GenreId = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -82,8 +84,8 @@ namespace GameStuff.Migrations
                 columns: new[] { "DeveloperId", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { 1, "dev1", "Developer1" },
-                    { 2, "dev2", "Developer2" },
+                    { 1, "Infinity", "Ward" },
+                    { 2, "Creative", "Assembly" },
                     { 3, "dev3", "Developer3" },
                     { 4, "dev4", "Developer4" },
                     { 5, "dev5", "Developer5" },
@@ -102,14 +104,14 @@ namespace GameStuff.Migrations
 
             migrationBuilder.InsertData(
                 table: "Games",
-                columns: new[] { "GameId", "GenreId", "Price", "Title" },
+                columns: new[] { "GameId", "GenreId", "Price", "Title", "Description" , "Image" },
                 values: new object[,]
                 {
-                    { 1, "FPS", 59.99, "game1" },
-                    { 2, "RTS", 59.99, "game2" },
-                    { 3, "MMO", 29.99, "game3" },
-                    { 4, "RTS", 50.00, "game4" },
-                    { 5, "FPS", 29.99, "game5" },
+                    { 1, "FPS", 69.99, "Call of Duty: Modern Warfare II ", "Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141. Modern Warfare® II will launch with a globe-trotting single-player campaign, immersive multiplayer combat, and an evolved special ops game mode featuring tactical co-op gameplay", "mw22.png" },
+                    { 2, "RTS", 59.99, "Halo Wars 2", "Halo Wars 2 delivers real-time strategy at the speed of Halo combat. Get ready to lead armies against a terrifying new foe on the biggest Halo battlefield ever", "Halo.jpg"},
+                    { 3, "MMO", 29.99, "zgame3" , "this is game 2", "mw22.png"},
+                    { 4, "RTS", 50.00, "zgame4" , "this is game 2", "mw22.png"},
+                    { 5, "FPS", 29.99, "zgame5" , "this is game 2", "mw22.png"},
 
                 });
 

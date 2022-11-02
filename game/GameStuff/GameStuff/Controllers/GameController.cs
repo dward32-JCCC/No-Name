@@ -38,11 +38,11 @@ namespace GameStuff.Controllers
 
         public ViewResult Details(int id)
         {
-            var book = data.Games.Get(new QueryOptions<Game> {
+            var game = data.Games.Get(new QueryOptions<Game> {
                 Include = "GameDevelopers.Developer, Genre",
                 Where = b => b.GameId == id
             });
-            return View(book);
+            return View(game);
         }
 
         [HttpPost]
