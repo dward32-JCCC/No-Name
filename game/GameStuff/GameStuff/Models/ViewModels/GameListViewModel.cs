@@ -13,9 +13,9 @@ namespace GameStuff.Models
         public IEnumerable<Genre> Genres { get; set; }
         public Dictionary<string, string> Prices =>
             new Dictionary<string, string> {
-                { "under7", "Under $7" },
-                { "7to14", "$7 to $14" },
-                { "over14", "Over $14" }
+                { "0-20", "$0-$20" },
+                { "20-70", "$20-$70" },
+                { "over70", "Over $70" }
             };
     }
 }
