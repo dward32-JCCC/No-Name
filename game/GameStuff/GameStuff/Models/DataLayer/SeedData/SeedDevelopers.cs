@@ -8,10 +8,11 @@ namespace GameStuff.Models
         public void Configure(EntityTypeBuilder<Developer> entity)
         {
             entity.HasData(
-                new Developer { DeveloperId = 1, FirstName = "Infinity", LastName = "Ward" },
-                new Developer { DeveloperId = 2, FirstName = "Creative", LastName = "Assembly" },
-                new Developer { DeveloperId = 3, FirstName = "dev3", LastName = "Developer3" },
-                new Developer { DeveloperId = 4, FirstName = "dev4", LastName = "Developer4" }
+                new Developer { DeveloperId = 1, DevName = "InfinityWard" },
+                new Developer { DeveloperId = 2, DevName = "Creative Assembly" },
+                new Developer { DeveloperId = 3, DevName = "Santa Monica Studio" },
+                new Developer { DeveloperId = 4, DevName = "WB Games Montréal" },
+                new Developer { DeveloperId = 5, DevName = "Electronic Arts" }
 
             );
         }

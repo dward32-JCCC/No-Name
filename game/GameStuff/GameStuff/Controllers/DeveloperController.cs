@@ -12,7 +12,7 @@ namespace GameStuff.Controllers
 
         public ViewResult List(GridDTO vals)
         {
-            string defaultSort = nameof(Developer.FirstName);
+            string defaultSort = nameof(Developer.DevName);
             var builder = new GridBuilder(HttpContext.Session, vals, defaultSort);
             builder.SaveRouteSegments();
 
@@ -23,9 +23,9 @@ namespace GameStuff.Controllers
                 OrderByDirection = builder.CurrentRoute.SortDirection
             };
             if (builder.CurrentRoute.SortField.EqualsNoCase(defaultSort))
-                options.OrderBy = a => a.FirstName;
+                options.OrderBy = a => a.DevName;
             else
-                options.OrderBy = a => a.LastName;
+                options.OrderBy = a => a.DevName;
 
             var vm = new DeveloperListViewModel {
                 Developers = data.List(options),

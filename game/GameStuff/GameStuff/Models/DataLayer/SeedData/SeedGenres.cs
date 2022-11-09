@@ -10,7 +10,9 @@ namespace GameStuff.Models
             entity.HasData(
                 new Genre { GenreId = "FPS", Name = "FPS" },
                 new Genre { GenreId = "RTS", Name = "RTS" },
-                new Genre { GenreId = "MMO", Name = "MMO" }
+                new Genre { GenreId = "MMO", Name = "MMO" },
+                new Genre { GenreId = "Action", Name = "Action" },
+                new Genre { GenreId = "Sports", Name = "Sports" }
 
             );
         }

@@ -11,8 +11,8 @@ namespace GameStuff.Models
                 new GameDeveloper { GameId = 1, DeveloperId = 1 },
                 new GameDeveloper { GameId = 2, DeveloperId = 2 },
                 new GameDeveloper { GameId = 3, DeveloperId = 3 },
-                new GameDeveloper { GameId = 4, DeveloperId = 5 },
-                new GameDeveloper { GameId = 5, DeveloperId = 1 }
+                new GameDeveloper { GameId = 4, DeveloperId = 4 },
+                new GameDeveloper { GameId = 5, DeveloperId = 5 }
 
             );
         }

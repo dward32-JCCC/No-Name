@@ -1,7 +1,7 @@
 ﻿@model Game
 
 <div class="text-center">
-    <h1>GAME OF THE DAY!</h1>
+    <h1>Featured Game</h1>
     <ul class="list-group">
         <li class="list-group-item ">
             <h4>
@@ -12,6 +12,7 @@
                     @Model.Title
                 </a>
             </h4>
+            <h2><img src="~/images/@Model.Image" width="500" height="500" /></h2>
         </li>
     </ul>
 </div>

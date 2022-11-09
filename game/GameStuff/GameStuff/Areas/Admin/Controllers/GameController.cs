@@ -53,17 +53,17 @@ namespace GameStuff.Areas.Admin.Controllers
                 }
                 if (search.IsDeveloper) {
                     int index = vm.SearchTerm.LastIndexOf(' ');
-                    if (index == -1) {
+                    if (index == -1)
+                    {
                         options.Where = b => b.GameDevelopers.Any(
-                            ba => ba.Developer.FirstName.Contains(vm.SearchTerm) || 
-                            ba.Developer.LastName.Contains(vm.SearchTerm));
+                            ba => ba.Developer.DevName.Contains(vm.SearchTerm));
                     }
                     else {
                         string first = vm.SearchTerm.Substring(0, index);
-                        string last = vm.SearchTerm.Substring(index + 1); 
+                        string last = vm.SearchTerm.Substring(index + 1);
                         options.Where = b => b.GameDevelopers.Any(
-                            ba => ba.Developer.FirstName.Contains(first) && 
-                            ba.Developer.LastName.Contains(last));
+                            ba => ba.Developer.DevName.Contains(first));
+
                     }
                     vm.Header = $"Search results for developer '{vm.SearchTerm}'";
                 }
@@ -154,7 +154,7 @@ namespace GameStuff.Areas.Admin.Controllers
             vm.SelectedDevelopers = vm.Game.GameDevelopers?.Select(
                 ba => ba.Developer.DeveloperId).ToArray();
             vm.Developers = data.Developers.List(new QueryOptions<Developer> {
-                OrderBy = a => a.FirstName });
+                OrderBy = a => a.DevName });
             vm.Genres = data.Genres.List(new QueryOptions<Genre> {
                     OrderBy = g => g.Name });
         }

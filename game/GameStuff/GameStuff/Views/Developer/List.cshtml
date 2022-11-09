@@ -15,36 +15,26 @@
     <thead class="thead-dark">
         <tr>
             <th>
-                @{ routes.SetSortAndDirection(nameof(Developer.FirstName), current); }
+                @{ routes.SetSortAndDirection(nameof(Developer.DevName), current); }
                 <a asp-action="List" asp-all-route-data="@routes"
-                   class="text-white">First Name</a>
-            </th>
-            <th>
-                @{ routes.SetSortAndDirection(nameof(Developer.LastName), current); }
-                <a asp-action="List" asp-all-route-data="@routes"
-                   class="text-white">Last Name</a>
+                   class="text-white">Developer</a>
             </th>
             <th>Game(s)</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (Developer author in Model.Developers)
+        @foreach (Developer developer in Model.Developers)
         {
         <tr>
             <td>
-                <a asp-action="Details" asp-route-id="@author.DeveloperId"
-                   asp-route-slug="@author.FullName.Slug()">
-                    @author.FirstName
+                <a asp-action="Details" asp-route-id="@developer.DeveloperId"
+                   asp-route-slug="@developer.FullName.Slug()">
+                    @developer.DevName
                 </a>
             </td>
+          
             <td>
-                <a asp-action="Details" asp-route-id="@author.DeveloperId"
-                   asp-route-slug="@author.FullName.Slug()">
-                    @author.LastName
-                </a>
-            </td>
-            <td>
-                @foreach (var ba in author.GameDevelopers)
+                @foreach (var ba in developer.GameDevelopers)
                 {
                     <p>
                         <a asp-action="Details" asp-controller="Game"
