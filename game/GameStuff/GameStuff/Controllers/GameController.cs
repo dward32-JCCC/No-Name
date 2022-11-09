@@ -26,7 +26,7 @@ namespace GameStuff.Controllers
             var vm = new GameListViewModel {
                 Games = data.Games.List(options),
                 Developers = data.Developers.List(new QueryOptions<Developer> {
-                    OrderBy = a => a.FirstName }),
+                    OrderBy = a => a.DevName }),
                 Genres = data.Genres.List(new QueryOptions<Genre> {
                     OrderBy = g => g.Name }),
                 CurrentRoute = builder.CurrentRoute,

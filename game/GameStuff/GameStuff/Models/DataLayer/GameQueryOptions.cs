@@ -10,12 +10,12 @@ namespace GameStuff.Models
                 Where = b => b.GenreId == builder.CurrentRoute.GenreFilter;
             }
             if (builder.IsFilterByPrice) {
-                if (builder.CurrentRoute.PriceFilter == "under7")
-                    Where = b => b.Price < 7;
-                else if (builder.CurrentRoute.PriceFilter == "7to14")
-                    Where = b => b.Price >= 7 && b.Price <= 14;
+                if (builder.CurrentRoute.PriceFilter == "0-20")
+                    Where = b => b.Price <= 20;
+                else if (builder.CurrentRoute.PriceFilter == "20-70")
+                    Where = b => b.Price >= 20 && b.Price <= 70;
                 else
-                    Where = b => b.Price > 14;
+                    Where = b => b.Price > 71;
             }
             if (builder.IsFilterByDeveloper) {
                 int id = builder.CurrentRoute.DeveloperFilter.ToInt();

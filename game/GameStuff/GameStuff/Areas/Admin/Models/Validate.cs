@@ -25,12 +25,12 @@ namespace GameStuff.Models
         public void ClearGenre() => tempData.Remove(GenreKey);
         public bool IsGenreChecked => tempData.Keys.Contains(GenreKey);
 
-        public void CheckDeveloper(string firstName, string lastName, string operation, Repository<Developer> data)
+        public void CheckDeveloper(string DevName, string operation, Repository<Developer> data)
         {
             Developer entity = null; 
             if (Operation.IsAdd(operation)) {
                 entity = data.Get(new QueryOptions<Developer> {
-                    Where = a => a.FirstName == firstName && a.LastName == lastName });
+                    Where = a => a.DevName == DevName});
             }
             IsValid = (entity == null) ? true : false;
             ErrorMessage = (IsValid) ? "" : 

@@ -8,17 +8,14 @@ namespace GameStuff.Models
     {
         public int DeveloperId { get; set; }
 
-        [Required(ErrorMessage = "Please enter a first name.")]
+        [Required(ErrorMessage = "Please enter developers name.")]
         [StringLength(200)]
-        public string FirstName { get; set; }
+        public string DevName { get; set; }
 
-        [Required(ErrorMessage = "Please enter a last name.")]
-        [MaxLength(200)]
         [Remote("CheckDeveloper", "Validation", "Area", 
-            AdditionalFields = "FirstName, Operation")]
-        public string LastName { get; set; }
+            AdditionalFields = "DevName, Operation")]
 
-        public string FullName => $"{FirstName} {LastName}";
+        public string FullName => $"{DevName}";
 
         public ICollection<GameDeveloper> GameDevelopers { get; set; }
     }

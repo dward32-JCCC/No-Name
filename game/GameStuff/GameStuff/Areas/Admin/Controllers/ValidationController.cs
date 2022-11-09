@@ -28,10 +28,10 @@ namespace GameStuff.Areas.Admin.Controllers
             }
         }
 
-        public JsonResult CheckAuthor(string firstName, string lastName, string operation)
+        public JsonResult CheckDeveloper(string firstName, string operation)
         {
             var validate = new Validate(TempData);
-            validate.CheckDeveloper(firstName, lastName, operation, DeveloperData);
+            validate.CheckDeveloper(firstName, operation, DeveloperData);
             if (validate.IsValid) {
                 validate.MarkDeveloperChecked();
                 return Json(true);

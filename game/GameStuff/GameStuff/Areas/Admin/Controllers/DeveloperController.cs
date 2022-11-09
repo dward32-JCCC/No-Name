@@ -14,7 +14,7 @@ namespace GameStuff.Areas.Admin.Controllers
         public ViewResult Index()
         {
             var developers = data.List(new QueryOptions<Developer> {
-                OrderBy = a => a.FirstName
+                OrderBy = a => a.DevName
             });
             return View(developers);
         }
@@ -42,9 +42,9 @@ namespace GameStuff.Areas.Admin.Controllers
         {
             var validate = new Validate(TempData);
             if (!validate.IsDeveloperChecked) {
-                validate.CheckDeveloper(developer.FirstName, developer.LastName, operation, data);
+                validate.CheckDeveloper(developer.DevName, operation, data);
                 if (!validate.IsValid) {
-                    ModelState.AddModelError(nameof(developer.LastName), validate.ErrorMessage);
+                    ModelState.AddModelError(nameof(developer.DevName), validate.ErrorMessage);
                 }    
             }
             
