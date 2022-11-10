@@ -6,7 +6,7 @@ namespace GameStuff.Models
 {
     public class Genre
     {
-        [MaxLength(10)]
+        [MaxLength(25)]
         [Required(ErrorMessage = "Please enter a genre id.")]
         [Remote("CheckGenre", "Validation", "Area")]
         public string GenreId { get; set; }

@@ -23,7 +23,7 @@ namespace GameStuff.Migrations
                 name: "Genres",
                 columns: table => new
                 {
-                    GenreId = table.Column<string>(maxLength: 10, nullable: false),
+                    GenreId = table.Column<string>(maxLength: 25, nullable: false),
                     Name = table.Column<string>(maxLength: 25, nullable: false)
                 },
                 constraints: table =>
@@ -39,7 +39,7 @@ namespace GameStuff.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(maxLength: 200, nullable: false),
                     Price = table.Column<double>(nullable: false),
-                    GenreId = table.Column<string>(nullable: false),
+                    GenreId = table.Column<string>(maxLength: 25, nullable: false),
                     Description = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true)
                 },
@@ -88,7 +88,8 @@ namespace GameStuff.Migrations
                     { 3, "Santa Monica Studio" },
                     { 4, "WB Games Montréal" },
                     { 5, "Electronic Arts" },
-                 
+                    { 6, "Team Cherry" },
+                    { 7, "Extremely OK Games" }
                 });
 
             migrationBuilder.InsertData(
@@ -99,9 +100,10 @@ namespace GameStuff.Migrations
                     { "FPS", "FPS" },
                     { "RTS", "RTS" },
                     { "MMO", "MMO" },
-                    {"Action", "Action"},
-                    {"Sports", "Sports"}
-
+                    { "Action", "Action" },
+                    { "Sports", "Sports" },
+                    { "Metroidvania", "Metroidvania" },
+                    { "Platformer", "Platformer" }
                 });
 
             migrationBuilder.InsertData(
@@ -114,7 +116,9 @@ namespace GameStuff.Migrations
                     { 3, "Action", 69.99, "God of War Ragnarok" , "Embark on a mythic journey for answers and allies before Ragnarök arrives.", "godofwar.jpg"},
                     { 4, "Action", 69.99, "Gotham Knights" , "Gotham Knights is a brand-new open world, third-person action RPG featuring the Batman Family as players step into the roles of Batgirl, Nightwing, Red Hood and Robin, a new guard of trained DC Super Heroes who must rise up as the protectors of Gotham City in the wake of Batman’s death. An expansive, criminal underworld has swept through the streets of Gotham, and it is now up to these new heroes to protect the city, bring hope to its citizens, discipline to its cops and fear to its criminals. Players must save Gotham from descent into chaos and reinvent themselves into their own version of the Dark Knight.", "gothamKnights.jpg"},
                     { 5, "Sports", 19.99, "Madden NFL 22" , "Madden NFL 22 is where gameday happens. It's everything you love about the NFL injected into every mode via ALL-NEW Dynamic Gameday.\r\nBrought to life by Next Gen Stats Star-Driven AI and Gameday Atmosphere elements, Dynamic Gameday delivers the smartest gameplay experience ever, all powered by real life data.", "madden22.jpg"},
-
+                    { 6, "RTS", 59.99, "Total War: Warhammer III", "Total War: Warhammer III is a turn-based strategy and real-time tactics video game developed by Creative Assembly and published by Sega. It is part of the Total War series, and the third to be set in Games Workshop's Warhammer Fantasy fictional universe.", "warhammeriii.jpg" },
+                    { 7, "Metroidvania", 14.99, "Hollow Knight", "Hollow Knight is a classically styled 2D action adventure across a vast interconnected world. Explore twisting caverns, ancient cities and deadly wastes; battle tainted creatures and befriend bizarre bugs; and solve ancient mysteries at the kingdom's heart. Includes free content packs!", "hollowknight.jpg" },
+                    { 8, "Platformer", 19.99, "Celeste", "Celeste is a 2018 platform game designed, directed and written by Maddy Thorson and programmed by Thorson and Noel Berry. It is a remake of a PICO-8 game of the same name made by Thorson and Berry during a game jam in 2016.", "celeste.png" }
                 });
 
             migrationBuilder.InsertData(
@@ -127,7 +131,9 @@ namespace GameStuff.Migrations
                     { 3, 3 },
                     { 4, 4 },
                     { 5, 5 },
-
+                    { 6, 2 },
+                    { 7, 6 },
+                    { 8, 7 }
                 });
 
             migrationBuilder.CreateIndex(
