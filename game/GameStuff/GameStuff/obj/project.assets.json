@@ -8494,24 +8494,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dward32\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ghost\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
+      "projectUniqueName": "C:\\Users\\ghost\\Documents\\GitHub\\No-Nameui\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
       "projectName": "GameStuff",
-      "projectPath": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
-      "packagesPath": "C:\\Users\\dward32\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lab Folders\\Desktop\\No-Name\\game\\GameStuff\\GameStuff\\obj\\",
+      "projectPath": "C:\\Users\\ghost\\Documents\\GitHub\\No-Nameui\\game\\GameStuff\\GameStuff\\GameStuff.csproj",
+      "packagesPath": "C:\\Users\\ghost\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ghost\\Documents\\GitHub\\No-Nameui\\game\\GameStuff\\GameStuff\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lab Folders\\AppData\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ghost\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8574,12 +8569,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.24, 3.1.24]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8588,7 +8577,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
