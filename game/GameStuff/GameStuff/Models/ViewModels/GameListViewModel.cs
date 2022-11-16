@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GameStuff.Models
 {
@@ -17,5 +18,10 @@ namespace GameStuff.Models
                 { "20-70", "$20-$70" },
                 { "over70", "Over $70" }
             };
+
+        [Required(ErrorMessage = "Please enter a search term.")]
+        public string SearchTerm { get; set; }
+        public string Type { get; set; }
+        public string Header { get; set; }
     }
 }

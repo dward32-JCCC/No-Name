@@ -10,6 +10,28 @@
 
 <h1>Game Catalog</h1>
 
+@* search form *@
+<form asp-action="Search" method="post" class="form-inline">
+    <h5 class="mt-1 mr-5">Find a game</h5>
+    <label>Search Term:</label>
+    <input type="text" asp-for="SearchTerm" class="form-control ml-2 mr-2">
+    Search By:
+    <label class="radio-inline">
+        <input type="radio" class="form-control ml-2 mr-2"
+               asp-for="Type" value="game" checked>Title
+    </label>
+    <label class="radio-inline">
+        <input type="radio" class="form-control ml-2 mr-2"
+               asp-for="Type" value="developer">Developer
+    </label>
+    <label class="radio-inline">
+        <input type="radio" class="form-control ml-2 mr-2"
+               asp-for="Type" value="genre">Genre
+    </label>
+    <button type="submit" class="btn btn-primary ml-2 mr-2">Find</button>
+    <span asp-validation-for="SearchTerm" class="text-danger"></span>
+</form>
+
 @* filter form *@
 <form asp-action="Filter" method="post" class="form-inline">
     <label>Developer: </label>
