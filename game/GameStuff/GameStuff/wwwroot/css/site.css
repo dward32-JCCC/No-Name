@@ -2,6 +2,11 @@
     font-size: 1.75em;
 }
 
+hBig {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 .container {
     background-color: #f2f2f2;
 }
