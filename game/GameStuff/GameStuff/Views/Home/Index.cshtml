@@ -12,7 +12,15 @@
                     @Model.Title
                 </a>
             </h4>
-            <h2><img src="~/images/@Model.Image" width="600" height="600" /></h2>
+             <h2>
+                  <a asp-controller="Game" 
+                   asp-action="Details"                   
+                   asp-route-id="@Model.GameId" 
+                   asp-route-slug="@Model.Title.Slug()">
+              <img src="~/images/@Model.Image" width="500" height="500" />
+                </a>
+                
+            </h2>
         </li>
     </ul>
 </div>
