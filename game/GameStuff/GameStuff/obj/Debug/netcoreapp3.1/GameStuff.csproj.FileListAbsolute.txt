@@ -1069,3 +1069,4 @@ C:\Users\Abroa\Desktop\No-Name\game\GameStuff\GameStuff\obj\Debug\netcoreapp3.1\
 C:\Users\Abroa\Desktop\No-Name\game\GameStuff\GameStuff\obj\Debug\netcoreapp3.1\GameStuff.genruntimeconfig.cache
 C:\Users\Abroa\Desktop\No-Name\game\GameStuff\GameStuff\obj\Debug\netcoreapp3.1\Razor\Views\Game\SearchResults.cshtml.g.cs
 C:\Users\Betsy\Desktop\No-Name\game\GameStuff\GameStuff\obj\Debug\netcoreapp3.1\Razor\Views\Game\SearchResults.cshtml.g.cs
+C:\Users\Lab Folders\Desktop\No-Name\game\GameStuff\GameStuff\obj\Debug\netcoreapp3.1\Razor\Views\Game\SearchResults.cshtml.g.cs

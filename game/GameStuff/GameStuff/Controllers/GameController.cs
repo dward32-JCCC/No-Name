@@ -74,7 +74,7 @@ namespace GameStuff.Controllers
 
 
         [HttpPost]
-        public RedirectToActionResult Search(SearchViewModel vm)
+        public RedirectToActionResult Search(GameListViewModel vm)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace GameStuff.Controllers
 
             if (search.HasSearchTerm)
             {
-                var vm = new SearchViewModel
+                var vm = new GameListViewModel
                 {
                     SearchTerm = search.SearchTerm
                 };
