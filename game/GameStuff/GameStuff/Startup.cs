@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;    // add this
+using Microsoft.AspNetCore.Identity;
 using GameStuff.Models;
 
 namespace GameStuff
@@ -16,7 +16,6 @@ namespace GameStuff
 
         public IConfiguration Configuration { get; }
 
-        // Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => options.LowercaseUrls = true);
@@ -29,7 +28,7 @@ namespace GameStuff
             services.AddDbContext<GameStuffContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("GameStuffContext")));
 
-            // add this
+            
             services.AddIdentity<User, IdentityRole>(options => {
                 options.Password.RequiredLength = 6;
                 options.Password.RequireNonAlphanumeric = false;
@@ -47,8 +46,8 @@ namespace GameStuff
 
             app.UseRouting();
 
-            app.UseAuthentication();   // add this
-            app.UseAuthorization();    // add this
+            app.UseAuthentication();  
+            app.UseAuthorization();   
 
             app.UseSession();
 
@@ -76,7 +75,7 @@ namespace GameStuff
                     pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
             });
 
-            GameStuffContext.CreateAdminUser(app.ApplicationServices).Wait();  // add this
+            GameStuffContext.CreateAdminUser(app.ApplicationServices).Wait(); 
         }
     }
 }

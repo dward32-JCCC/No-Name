@@ -18,9 +18,7 @@
     @* Operation field needed by remote validation *@
     <input type="hidden" name="Operation" value="@action" />
 
-    @* if deleting, just display full name, but include first and last
-        name in hidden fields so can be used to display delete message.
-        Otherwise, provide text boxes for first and last name. *@
+  
     @if (Operation.IsDelete(action))
     {
         <div class="col-sm-4"><label>@Model.FullName</label></div>

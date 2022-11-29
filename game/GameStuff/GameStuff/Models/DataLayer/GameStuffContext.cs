@@ -23,7 +23,7 @@ namespace GameStuff.Models
             base.OnModelCreating(modelBuilder);
 
             // GameDeveloper: set primary key 
-            modelBuilder.Entity<GameDeveloper>().HasKey(ba => new { GameId = ba.GameId, AuthorId = ba.DeveloperId });
+            modelBuilder.Entity<GameDeveloper>().HasKey(ba => new { GameId = ba.GameId, DeveloperId = ba.DeveloperId });
 
             // GameDeveloper: set foreign keys 
             modelBuilder.Entity<GameDeveloper>().HasOne(ba => ba.Game)

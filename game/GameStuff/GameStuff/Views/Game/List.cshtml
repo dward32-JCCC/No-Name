@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = " | Game Catalog";
 
-    // aliases to make paging, sorting, and filtering code shorter
     RouteDictionary current = Model.CurrentRoute;
     RouteDictionary routes = Model.CurrentRoute.Clone();
 }
@@ -65,8 +64,7 @@
 @* add to cart form *@
 <form asp-action="Add" asp-controller="Cart" method="post">
     <table class="table table-bordered table-striped table-sm">
-        @* for each table column, update the route dictionary with the field to sort by, and then use
-            that route dictionary and the current route to create route segments for sorting link *@
+       
         <thead class="thead-dark">
         <tr>
             <th>Image</th>
@@ -130,9 +128,7 @@
 
 @* paging links *@
 @{
-    @* Reset the route dictionary to the current route values. This is necessary
-        to clear the changes made while creating the sorting links above. Clone so
-        don't overwrite current route segment values. *@
+    @* Reset the route dictionary to the current route values. *@
     routes = Model.CurrentRoute.Clone();
 
     @* update route dictionary with page number in 'i' and then use
