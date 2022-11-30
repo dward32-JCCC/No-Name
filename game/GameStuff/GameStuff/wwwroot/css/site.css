@@ -2,9 +2,49 @@
     font-size: 1.75em;
 }
 
+hBig {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 .container {
     background-color: #f2f2f2;
 }
+
+
+body {
+    background-color: red;
+}
+
+/*Top Navbar colors*/
+
+.bg-dark {
+    background-color: #000 !important;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+    color: red;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: red;
+}
+
+.btn-outline-light {
+    color: red;
+    border-color: red;
+}
+
+/*Table colors*/
+
+.table .thead-dark th {
+    background-color: #000;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid;
+}
+
 
 .jumbotron {
     padding-top: 0;
@@ -13,6 +53,6 @@
 }
 
 .input-validation-error {
-    border: 2px solid #dc3545;  /* same red as text-danger */
-    background-color: #faebd7;  /* antique white */
+    border: 2px solid #dc3545; /* same red as text-danger */
+    background-color: #faebd7; /* antique white */
 }
