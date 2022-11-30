@@ -9,7 +9,7 @@ namespace GameStuff.Models
         public RouteDictionary CurrentRoute { get; set; }
         public int TotalPages { get; set; }
 
-        // data for filter drop-downs - one hardcoded
+        // data for filter drop-downs
         public IEnumerable<Developer> Developers { get; set; }
         public IEnumerable<Genre> Genres { get; set; }
         public Dictionary<string, string> Prices =>

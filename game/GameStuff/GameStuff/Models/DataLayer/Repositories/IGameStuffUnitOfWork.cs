@@ -8,7 +8,7 @@
         Repository<Genre> Genres { get; }
 
         void DeleteCurrentGameDevelopers(Game game);
-        void LoadNewGameDevelopers(Game game, int[] authorids);
+        void LoadNewGameDevelopers(Game game, int[] gameids);
         void Save();
     }
 }

@@ -54,9 +54,9 @@ namespace GameStuff.Models
             }
         }
 
-        public void LoadNewGameDevelopers(Game game, int[] authorids)
+        public void LoadNewGameDevelopers(Game game, int[] gameids)
         {
-            game.GameDevelopers = authorids.Select(i =>
+            game.GameDevelopers = gameids.Select(i =>
                 new GameDeveloper { Game = game, DeveloperId = i })
                 .ToList();
         }
