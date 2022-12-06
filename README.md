@@ -26,3 +26,20 @@
 * MVC Version: MVC3/MVC4/MVC5
 * Microsoft SQL Server 2005 or higher
 * Web browsers with JavaScript enabled
+
+## User Documentation
+### User Stories
+*
+*
+#### Login
+*
+*
+#### Product Browsing
+*
+*
+#### Cart
+*
+*
+#### Checkout
+*
+*
