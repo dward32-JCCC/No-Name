@@ -31,29 +31,29 @@
 ### User Stories
 #### Login
 * Login Screen
-** Accessed through the login button on the navigation bar or when adding an item to the cart without logging in
-** Allows users to add items to the cart and checkout items
+  * Accessed through the login button on the navigation bar or when adding an item to the cart without logging in
+  * Allows users to add items to the cart and checkout items
 * Create Account Screen
-** Accessed through the login screen
-** Allows user to create an account
+  * Accessed through the login screen
+  * Allows user to create an account
 #### Product Browsing
 * Search Bar
-** Located on the top of the search page
-** Allows for users to filter down searches though whatever parameter is inputed
+  * Located on the top of the search page
+  * Allows for users to filter down searches though whatever parameter is inputed
 * Filters
-** Located on the search page just under the search bar
-** Allows users to filter down searches through set perameters
+  * Located on the search page just under the search bar
+  * Allows users to filter down searches through set perameters
 #### Cart
 * Add to cart
-** Located next to game on search page or at the bottom of the game page
-** Adds the game to the cart
+  * Located next to game on search page or at the bottom of the game page
+  * Adds the game to the cart
 * Remove from cart
-** Located on the cart page that is accessed through the navigation bar
-** Removes the game from the cart
+  * Located on the cart page that is accessed through the navigation bar
+  * Removes the game from the cart
 #### Checkout
 * Total Cost
-** Located at the top of the cart page accessed through the navigation bar
-** Shows the total cost of the transaction
+  * Located at the top of the cart page accessed through the navigation bar
+  * Shows the total cost of the transaction
 * Checkout Items
-** Located next to the total cost on the top of the cart page
-** Completes the transaction
+  * Located next to the total cost on the top of the cart page
+  * Completes the transaction
